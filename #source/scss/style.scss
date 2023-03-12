@@ -12,10 +12,16 @@ $yellow: #F0BC00;
 	padding: 0;
 }
 
+a {
+	text-decoration: none;
+	color: $white;
+}
+
 html,
 body {
 	height: 100%;
 	position: relative;
+	box-sizing: border-box;
 }
 
 body {
@@ -92,6 +98,35 @@ input:focus:-ms-input-placeholder {
 
 .main {
 	flex: 1 1 auto;
+}
+
+
+.truncate p {
+	margin: 0;
+	/* Убираем внешний отступ */
+	-webkit-line-clamp: 7;
+	/* Число отображаемых строк */
+	display: -webkit-box;
+	/* Включаем флексбоксы */
+	-webkit-box-orient: vertical;
+	/* Вертикальная ориентация */
+	overflow: hidden;
+	/* Обрезаем всё за пределами блока */
+}
+
+.btn-main {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 2.5;
+	letter-spacing: 0.05em;
+	background-color: $blue;
+	color: $white;
+	padding: 0 40px;
+
+	&:hover {
+		color: $white;
+		background-color: $blue-intense;
+	}
 }
 
 // Навбар
@@ -193,35 +228,13 @@ input:focus:-ms-input-placeholder {
 }
 
 // Топ 10 фильмов Карусель
-// .slider-top-films {
-// 	// 	padding-bottom: 15px;
-// 	padding: 0 15px;
-
-// 	&__item {
-// 		overflow: hidden;
-// 		height: 435px;
-// 		width: 825px;
-// 		// margin: 0 10px;
-// 		border-radius: 45px;
-// 		position: relative;
-
-// 		img {
-// 			position: absolute;
-// 			display: block;
-// 			width: 100%;
-// 			max-width: 100%;
-// 			object-fit: cover;
-// 		}
-// 	}
-// }
-
 swiper-container {
 	width: 100%;
 	height: 100%;
 }
 
-swiper-slide {
-	background: $white;
+.slider-top-films__slide {
+	background: #fff;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -229,23 +242,221 @@ swiper-slide {
 	overflow: hidden;
 
 	width: 45%;
-	height: auto;
+	height: 440px;
 }
 
-swiper-slide img {
-	display: block;
+.top-films {
+	position: relative;
+}
+
+.slider-top-films__slide img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
 
 .swiper-pagination-horizontal {
-	// bottom: -20px !important;
+	bottom: -30px !important;
 }
 
 .swiper-pagination-bullet {
-	// width: 20px;
-	// height: 20px;
+	width: 15px;
+	height: 15px;
+}
+
+.swiper {
+	overflow-y: visible;
+}
+
+.slider-top-films__slide {
+	overflow: hidden;
+	border-radius: 45px;
+	width: 100%;
+	min-height: 100%;
+	position: relative;
+	height: auto;
+	padding: 200px 0px 40px 40px;
+
+	&::after {
+		content: "";
+		transition: all 0.5s ease 0s;
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		background: rgba(0, 0, 0, 0.5);
+	}
+}
+
+.slide {
+	// .slide__content
+
+	&__content {
+		transition: all 0.8s ease 0s;
+		transform: translate(0px, 70%);
+	}
+
+	// .slide__header
+
+	&__header {
+		align-items: center;
+		display: flex;
+	}
+
+	// .slide__title
+
+	&__title {
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: 42px;
+		line-height: 51px;
+		letter-spacing: 0.24em;
+		color: #ffffff;
+	}
+
+	// .slide__kp-value
+
+	&__kp-value {
+		padding: 6px 5px;
+		font-weight: 700;
+		font-size: 12px;
+		color: #ffffff;
+		background: #eb4e00;
+		border-radius: 15px;
+	}
+
+	// .slide__imdb-value
+
+	&__imdb-value {
+		margin-left: 10px;
+		background: #f0bc00;
+		border-radius: 15px;
+		padding: 6px 5px;
+		font-weight: 700;
+		font-size: 12px;
+		color: #ffffff;
+	}
+
+	// .slide__small
+
+	&__small {
+		margin-top: 10px;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 11px;
+		text-align: justify;
+		letter-spacing: 0.01em;
+		color: #ffffff;
+	}
+
+	// .slide__date
+
+	&__date {}
+
+	// .slide__duration
+
+	&__duration {}
+
+	// .slide__age
+
+	&__age {}
+
+	// .slide__main
+
+	&__main {
+		transition: all 0.3s ease 0s;
+		opacity: 0;
+		display: flex;
+		align-items: center;
+
+	}
+
+	// .slide__description
+
+	&__description {
+		margin-top: 15px;
+		max-width: 545px;
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 18px;
+		text-align: justify;
+		letter-spacing: 0.1em;
+		color: $white;
+		max-height: 130px;
+		overflow: hidden;
+	}
+
+	// .slide__link
+
+	&__link {
+		width: 90px;
+		height: 90px;
+		// background: #000000;
+		margin: 0 auto;
+		position: relative;
+
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+
+		}
+	}
+}
+
+.swiper-wrapper {
+	// max-height: 580px;
+}
+
+.swiper-pagination-bullet-active {
+	width: 35px;
+	height: 14px;
+	border-radius: 14px;
+}
+
+.swiper-slide-active {
+	&::after {
+		transition: all 0.3s ease 0s;
+		opacity: 1;
+	}
+
+	.slide__content {
+		transition: all 0.8s ease 0s;
+		transform: translate(0px, 0%);
+	}
+
+	.slide__main {
+		transition: all 0.3s ease 0.2s;
+		opacity: 1;
+	}
+}
+
+.slider-top-films {
+
+	&__swiper-button-prev,
+	&__swiper-button-next {
+		margin-right: 15px;
+		background-color: #1b202325;
+		border-radius: 15px;
+		padding: 45px 30px;
+		color: $blue;
+		transition: all .2s ease;
+
+		&:hover {
+			background-color: $blue;
+			color: $blue-intense;
+		}
+	}
 }
 
 // Популярные фильмы
@@ -254,7 +465,7 @@ swiper-slide img {
 	a {
 		display: block;
 		text-decoration: none;
-		color: $black;
+		color: $white;
 		font-weight: 400;
 
 	}
@@ -267,6 +478,19 @@ swiper-slide img {
 		overflow: hidden;
 		position: relative;
 		transition: all .3s ease;
+
+		&::before {
+			content: "";
+			transition: all 0.5s ease 0s;
+			position: absolute;
+			opacity: 0;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			background: rgba(0, 0, 0, 0.4);
+		}
 
 		&:hover {
 
@@ -283,10 +507,15 @@ swiper-slide img {
 
 			img {
 				filter: blur(1px);
-				filter: grayscale(10%);
+
 
 			}
 
+			&::before {
+				opacity: 1;
+				z-index: 2;
+
+			}
 
 		}
 
@@ -295,6 +524,8 @@ swiper-slide img {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+
+
 		}
 	}
 
@@ -321,11 +552,21 @@ swiper-slide img {
 		z-index: 2;
 		// font-size: 14px;
 		// font-weight: 400;
-		font-weight: 700;
+		font-weight: 500;
 		line-height: 16px;
 		padding: 10px 22px;
-		overflow-y: auto;
+
+		display: flex;
+		flex-direction: column;
+
+
+
 		// letter-spacing: 0.045em;
+	}
+
+	&__time {
+		display: block;
+		flex: 1 1 auto;
 	}
 }
 
@@ -342,4 +583,22 @@ swiper-slide img {
 		padding: 2px 10px;
 		border-radius: 15px;
 	}
+}
+
+// Жанры
+
+.genres {
+
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+.genres-slider {
+
+	&__wrapper {}
+
+	&__slide {}
 }
