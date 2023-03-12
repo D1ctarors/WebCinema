@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="shortcut icon" href="..." type="image/x-icon">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+	<!-- <link rel="stylesheet" href="/css/fontello.css"> -->
+
+	<link rel="stylesheet" href="/css/style.css">
+
+	<title>WebCinema</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header mb-5 pt-3">
+			<nav class="navbar navbar-expand-lg text-end">
+				<div class="container-lg">
+					<a href="#" class="navbar__logo text-start d-block">
+						<img src="/img/Logo.svg" alt="logo">
+					</a>
+					<form class="navbar__search col-xl-6 col-md-6 col-sm-6 me-auto" role="search">
+						<input class="form-control" type="search" placeholder="Фильмы и сериалы"
+							aria-label="Фильмы и сериалы">
+						<button class="btn" type="submit"><img src="/img/search.svg" class="img-fluid"
+								alt="seacrh"></button>
+					</form>
+					<div class="navbar__profile"><img src="/img/user.svg" alt=""></div>
+					<button class="navbar__burger btn" type="button" data-bs-toggle="offcanvas"
+						data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+						<div class="line-1"></div>
+						<div class="line-2"></div>
+						<div class="line-3"></div>
+					</button>
+				</div>
+			</nav>
+		</header>
+
+		<main class="main">
+			<!-- Топ 10 за неделю -->
+			<section class="top-films main-section">
+				<!-- <div class="container-fluid"> -->
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<h4 class="mb-4">Топ 10 за неделю</h4>
+						</div>
+					</div>
+				</div>
+
+				<!-- Слайдер топ 10 за неделю -->
+
+				<swiper-container class="slider-top-films" pagination="true" pagination-clickable="true"
+					slides-per-view="auto" centered-slides="true" space-between="30" initial-slide="1">
+
+					<swiper-slide class="slider-top-films__item">
+						<img src="/img/top-movies/01.png" alt="">
+					</swiper-slide>
+
+					<swiper-slide class="slider-top-films__item">
+						<img src="/img/top-movies/02.webp" alt="">
+					</swiper-slide>
+
+					<swiper-slide class="slider-top-films__item">
+						<img src="/img/top-movies/01.png" alt="">
+					</swiper-slide>
+				</swiper-container>
+
+
+	</div>
+
+	<!-- /Слайдер топ 10 за неделю -->
+
+	</section>
+
+	<!-- Популярные фильмы -->
+	<section class="popular-films main-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h4 class="mb-4">Популярные сейчас</h4>
+				</div>
+			</div>
+			<div class="row">
+
+			</div>
+
+
+
+
+		</div>
+	</section>
+	</main>
+
+	<footer id="footer">
+		<div class="container">
+			<div class="row text-center">
+				<div class="col-12">
+					<h4>All Good</h4>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Элементы бургера -->
+	<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+		<div class="offcanvas-header">
+			<h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+		</div>
+		<div class="offcanvas-body">
+			<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="#">Главная</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Ссылка</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						Выпадающий список
+					</a>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Действие</a></li>
+						<li><a class="dropdown-item" href="#">Другое действие</a></li>
+						<li>
+							<hr class="dropdown-divider">
+						</li>
+						<li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
+					</ul>
+				</li>
+			</ul>
+			<form class="d-flex mt-3" role="search">
+				<input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
+				<button class="btn btn-outline-success" type="submit">Поиск</button>
+			</form>
+		</div>
+	</div>
+
+	</div>
+
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+	<script src="/js/sliders.js"></script>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
