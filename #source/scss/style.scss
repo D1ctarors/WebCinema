@@ -52,14 +52,16 @@ body {
 	height: 100%;
 	position: relative;
 	box-sizing: border-box;
+	background: url(../img/bg.png);
+	color: hsl(0, 0%, 50%);
 	overflow-x: hidden;
 }
 
 body {
-	background: url(../img/bg.png);
-	color: hsl(0, 0%, 50%);
+
 	// background: #3b3b3b;
 
+	// overflow-y: visible;
 }
 
 // Скрытие крестика в инпуте поиска

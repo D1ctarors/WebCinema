@@ -19,12 +19,9 @@ body {
   position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  overflow-x: hidden;
-}
-
-body {
   background: url(../img/bg.png);
   color: hsl(0, 0%, 50%);
+  overflow-x: hidden;
 }
 
 input[type=text]::-ms-clear {
