@@ -52,13 +52,14 @@ body {
 	height: 100%;
 	position: relative;
 	box-sizing: border-box;
+	overflow-x: hidden;
 }
 
 body {
 	background: url(../img/bg.png);
 	color: hsl(0, 0%, 50%);
 	// background: #3b3b3b;
-	overflow-x: hidden;
+
 }
 
 // Скрытие крестика в инпуте поиска
@@ -315,8 +316,8 @@ swiper-container {
 
 
 .swiper {
-	overflow: visible;
-	overflow-x: hidden;
+	// overflow: visible;
+	// overflow-x: hidden;
 }
 
 .top-films-slider {
