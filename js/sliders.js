@@ -12,30 +12,31 @@ function initSlidersTopFilm() {
 		preloadImages: true,
 		parallax: true,
 		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
+			nextEl: ".top-films-slider__swiper-button-next",
+			prevEl: ".top-films-slider__swiper-button-prev",
 		},
 		breakpoints: {
 			320: {
 				slidesPerView: 1,
-				spaceBetween: 20
+				spaceBetween: 5
 			},
 			530: {
-				slidesPerView: 1,
-				spaceBetween: 20
+				slidesPerView: 1.05,
+				spaceBetween: 10
 			},
 			768: {
-				slidesPerView: 1,
-				// navigation: false,
+				slidesPerView: 1.4,
 			},
 			992: {
-				slidesPerView: 1,
+				slidesPerView: 1.4,
 				spaceBetween: 20
 			},
 			1268: {
+				slidesPerView: 1.7,
 				spaceBetween: 24
 			},
 			1550: {
+				slidesPerView: 2,
 				spaceBetween: 24
 			}
 		},
@@ -44,17 +45,22 @@ function initSlidersTopFilm() {
 
 
 }
+
+
 function initSlidersGenres() {
 	if (document.querySelector(".genres-slider")) new Swiper(".genres-slider", {
-		slidesPerView: 3,
-		spaceBetween: 5,
+		slidesPerView: 1,
+		spaceBetween: 10,
+
 		// freeMode: true,
-		// pagination: {
-		// 	el: ".swiper-pagination",
-		// 	clickable: true,
-		// },
+		navigation: {
+			nextEl: ".genres-slider__btn-next",
+			prevEl: ".genres-slider__btn-prev",
+		},
 	});
 }
+
+
 window.addEventListener("load", (function (e) {
 	initSlidersTopFilm();
 	initSlidersGenres();
