@@ -21,7 +21,7 @@ function initSlidersTopFilm() {
 				spaceBetween: 5
 			},
 			530: {
-				slidesPerView: 1.05,
+				slidesPerView: 1.1,
 				spaceBetween: 10
 			},
 			768: {
@@ -49,14 +49,40 @@ function initSlidersTopFilm() {
 
 function initSlidersGenres() {
 	if (document.querySelector(".genres-slider")) new Swiper(".genres-slider", {
-		slidesPerView: 1,
-		spaceBetween: 10,
-
+		slidesPerView: 6,
+		spaceBetween: 24,
 		// freeMode: true,
+		preloadImages: true,
 		navigation: {
 			nextEl: ".genres-slider__btn-next",
 			prevEl: ".genres-slider__btn-prev",
 		},
+		breakpoints: {
+			320: {
+				slidesPerView: 2.5,
+				spaceBetween: 5
+			},
+			530: {
+				slidesPerView: 3,
+				spaceBetween: 20
+			},
+			768: {
+				slidesPerView: 4,
+			},
+			992: {
+				// slidesPerView: 1.4,
+				spaceBetween: 20
+			},
+			1268: {
+				// slidesPerView: 1.7,
+				spaceBetween: 24
+			},
+			1550: {
+				slidesPerView: 6,
+				spaceBetween: 24
+			}
+		},
+
 	});
 }
 
