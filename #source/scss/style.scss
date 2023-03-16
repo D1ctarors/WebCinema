@@ -41,6 +41,14 @@ body {
 	background: $black-gray;
 	overflow-x: hidden;
 }
+// Скрытие скролл бара
+/* хром, сафари */
+::-webkit-scrollbar {
+	width: 0;
+	-ms-overflow-style: none;
+	
+			overflow: -moz-scrollbars-none;
+}
 
 // Прибивание футера к низу
 .wrapper {

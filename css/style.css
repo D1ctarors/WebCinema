@@ -161,6 +161,13 @@ body {
   overflow-x: hidden;
 }
 
+/* хром, сафари */
+::-webkit-scrollbar {
+  width: 0;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
