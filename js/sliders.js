@@ -11,6 +11,10 @@ function initSlidersTopFilm() {
 		loopAdditionalSlides: 3,
 		preloadImages: true,
 		parallax: true,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
 		navigation: {
 			nextEl: ".top-films-slider__swiper-button-next",
 			prevEl: ".top-films-slider__swiper-button-prev",
