@@ -18,7 +18,7 @@ function initSlidersTopFilm() {
 		breakpoints: {
 			320: {
 				slidesPerView: 1,
-				spaceBetween: 5
+				spaceBetween: 8
 			},
 			530: {
 				slidesPerView: 1.1,

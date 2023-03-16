@@ -66,6 +66,10 @@ body {
 	/* Вертикальная ориентация */
 	overflow: hidden;
 	/* Обрезаем всё за пределами блока */
+
+	@media (max-width: $mobile) {
+		-webkit-line-clamp: 5;
+	}
 }
 
 // Навбар
@@ -482,7 +486,7 @@ swiper-container {
 
 	@media (max-width: $mobile) {
 
-		padding: 35px 25px 25px 25px;
+		padding: 60px 25px 25px 25px;
 
 		&__content {
 			transform: translate(0px, 60%);
