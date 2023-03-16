@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="shortcut icon" href="..." type="image/x-icon">
+
+	<script src="https://kit.fontawesome.com/18b8ecb5e9.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+
+	<title>WebCinema</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<nav class="navbar navbar-expand-lg text-end">
+				<div class="container-lg">
+					<a href="#" class="navbar__logo text-start">
+						<span>W</span>eb<span>C</span>inema
+						<!-- <img src="./img/Logo.svg" alt="logo"> -->
+					</a>
+					<form class="navbar__search col-xl-7 col-lg-6 col-md-7 col-10" role="search">
+						<input class="form-control" type="search" placeholder="Фильмы и сериалы"
+							aria-label="Фильмы и сериалы">
+						<button class="btn" type="submit"><img src="./img/search.svg" class="img-fluid"
+								alt="seacrh"></button>
+					</form>
+
+					<!-- <button class="navbar__profile btn"><img src="./img/user.svg" alt=""></button> -->
+
+					<button class="navbar__burger btn" type="button" data-bs-toggle="offcanvas"
+						data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+						<div class="line-1"></div>
+						<div class="line-2"></div>
+						<div class="line-3"></div>
+					</button>
+				</div>
+			</nav>
+		</header>
+
+		<main class="main">
+			<!-- <div class="film-page-wrapper"> -->
+			<section class="full-screen full-screen-film">
+
+				<!-- <video autoplay muted loop>
+					<source src="https://www.youtube.com/embed/2mVDlL7YQ7o" type="video/mp4" />
+				</video> -->
+				<video autoplay muted loop poster="/img/mira-film.png" playsinline="playsinline"
+					webkit-playsinline="webkit-playsinline" preload="auto"
+					data-yt2html5="https://www.youtube.com/watch?v=PzFh5C7QxiA">
+				</video>
+
+				<div class="container-lg full-screen__content">
+					<!-- Название фильма -->
+					<div class="row mb-4">
+						<div class="col-xl-3 full-screen__film-name">Мира</div>
+					</div>
+
+					<!-- Рейтинги, год, время, возраст -->
+					<div class="row mb-4">
+						<div class="col-xl-4 full-screen__film-info">
+							<div class="raitings full-screen__raitings">
+								<div class="raitings__kp">
+									<!-- <svg width="20px" height="20px" viewBox="0 0 192 192"
+																									xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill="none">
+													
+																									<g id="SVGRepo_bgCarrier" stroke-width="0" />
+													
+																									<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+																										stroke-linejoin="round" />
+													
+																									<g id="SVGRepo_iconCarrier">
+													
+																										<path
+																											d="M96.5 20 66.1 75.733V20H40.767v152H66.1v-55.733L96.5 172h35.467C116.767 153.422 95.2 133.578 80 115c28.711 16.889 63.789 35.044 92.5 51.933v-30.4C148.856 126.4 108.644 115.133 85 105c23.644 3.378 63.856 7.889 87.5 11.267v-30.4L85 90c27.022-11.822 60.478-22.711 87.5-34.533v-30.4C143.789 41.956 108.711 63.11 80 80l51.967-60z"
+																											style="display:inline;fill:none;stroke:#ffffff;stroke-width:8;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" />
+													
+																									</g>
+													
+																								</svg>-->kp: 7.2
+								</div>
+								<div class="raitings__imdb">
+									<!-- <svg fill="#ffffff" width="20px" height="20px" viewBox="0 0 32 32"
+																									id="Camada_1" version="1.1" xml:space="preserve"
+																									xmlns="http://www.w3.org/2000/svg"
+																									xmlns:xlink="http://www.w3.org/1999/xlink" stroke="#ffffff">
+													
+																									<g id="SVGRepo_bgCarrier" stroke-width="0" />
+													
+																									<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+																										stroke-linejoin="round" />
+													
+																									<g id="SVGRepo_iconCarrier">
+																										<g>
+																											<path
+																												d="M8.4,21.1H5.9V9.9h3.8l0.7,4.7h0.1L11,9.9h3.8v11.2h-2.5v-6.7h-0.1l-0.9,6.7H9.4l-1-6.7h0L8.4,21.1L8.4,21.1z" />
+																											<path
+																												d="M15.8,9.8c0.4,0,3.2-0.1,4.7,0.1c1.2,0.1,1.8,1.1,1.9,2.3c0.1,2.2,0.1,4.4,0.1,6.6c0,0.2,0,0.5-0.1,0.8 c-0.2,0.9-0.7,1.4-1.9,1.5c-1.5,0.1-3,0.1-4.4,0.1c0,0-0.1,0-0.2,0V9.8z M18.8,11.9v7.2c0.5,0,0.8-0.2,0.8-0.7c0-1.9,0-3.9,0-5.9 C19.6,12,19.4,11.8,18.8,11.9z" />
+																											<path d="M2,21.1V9.9h2.9v11.2H2z" />
+																											<path
+																												d="M29.9,14.1c-0.1-0.8-0.6-1.2-1.4-1.4c-0.8-0.1-1.6,0-2.3,0.7V9.9h-2.8v11.2H26c0.1-0.2,0.1-0.4,0.2-0.5c0,0,0,0,0.1,0 c0.1,0.1,0.2,0.2,0.3,0.3c0.7,0.5,1.5,0.6,2.3,0.3c0.7-0.3,1-0.9,1-1.6c0-0.8,0.1-1.7,0.1-2.6C30,16,30,15,29.9,14.1L29.9,14.1z M27.1,19.1c0,0.2-0.2,0.4-0.4,0.4s-0.4-0.2-0.4-0.4v-4.3c0-0.2,0.2-0.4,0.4-0.4s0.4,0.2,0.4,0.4V19.1z" />
+																										</g>
+																									</g>
+													
+																								</svg>--> imdb: 7.2
+								</div>
+							</div>
+
+							<div class="full-screen__overviewMeta-description ">
+								<div>2022,</div>
+								<div>1ч. 50мин.,</div>
+								<div>+12</div>
+							</div>
+						</div>
+
+
+					</div>
+
+					<!-- Краткое описание -->
+					<div class="row mb-5">
+						<div class="col-xl-5 full-screen__short-description">
+							Российский космонавт спасает дочь на Земле, не спускаясь с орбиты. Зрелищный
+							фильм-катастрофа по заветам Эммериха.
+						</div>
+					</div>
+
+					<!-- Кнопка -->
+					<div class="row">
+						<div class="col-xl-3">
+							<button class="btn btn-main full-screen__btn">Смотреть</button>
+						</div>
+					</div>
+
+				</div>
+
+
+
+
+
+			</section>
+
+			<section class="film-details">
+				<div class="container-lg">
+					<div class="row">
+						<div class="genres__top mb-2">
+							<h5>Детали</h5>
+						</div>
+					</div>
+					<!-- Актёрский состав -->
+					<div class="row">
+						<div class="col-12 film-details__line">
+							<h5 class="film-details__title">Актёры:</h5>
+							<ul>
+								<li><a href="#">Райан Гослинг,</a></li>
+								<li><a href="#">Райан Гослинг,</a></li>
+								<li><a href="#">Райан Гослинг,</a></li>
+								<li><a href="#">Райан Гослинг,</a></li>
+								<li><a href="#">Райан Гослинг,</a></li>
+								<li><a href="#">Райан Гослинг,</a></li>
+								<li><a href="#">Райан Гослинг,</a></li>
+								<li><a href="#">Райан Гослинг,</a></li>
+								<li><a href="#">Райан Гослинг,</a></li>
+								<li><a href="#">Райан Гослинг,</a></li>
+								<li><a href="#">Райан Гослинг,</a></li>
+								<li><a href="#">Райан Гослинг,</a></li>
+								<li><a href="#">Райан Гослинг,</a></li>
+								<li><a href="#">Райан Гослинг,</a></li>
+								<li><a href="#">Райан Гослинг,</a></li>
+								<li><a href="#">Райан Гослинг</a></li>
+							</ul>
+						</div>
+
+					</div>
+
+					<!-- Режисёр -->
+					<div class="row">
+						<div class="col-12 film-details__line">
+							<h5 class="film-details__title">Режисёр:</h5>
+							<ul>
+								<li><a href="#">Райан Гослинг</a></li>
+							</ul>
+						</div>
+
+					</div>
+
+					<!-- Страна -->
+					<div class="row">
+						<div class="col-12 film-details__line">
+							<h5 class="film-details__title">Страна:</h5>
+							<ul>
+								<li><a href="#">Россия</a></li>
+							</ul>
+						</div>
+
+					</div>
+
+					<!-- Жанры -->
+					<div class="row">
+						<div class="col-12 film-details__line">
+							<h5 class="film-details__title">Жанры:</h5>
+							<ul>
+								<li><a href="#">Райан Гослинг,</a></li>
+								<li><a href="#">Райан Гослинг,</a></li>
+								<li><a href="#">Райан Гослинг,</a></li>
+								<li><a href="#">Райан Гослинг,</a></li>
+								<li><a href="#">Райан Гослинг,</a></li>
+								<li><a href="#">Райан Гослинг,</a></li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<section class="film-details film-full-description">
+				<div class="container-lg">
+					<div class="row">
+						<div class="genres__top mb-2">
+							<h5>Описание</h5>
+						</div>
+					</div>
+					<div class="row">
+						<p>
+							Владивосток, недалекое будущее. В машине с утра едут старшеклассница Лера Арабова
+							(Вероника
+							Устимова), её мама (Дарья
+							Мороз), отчим (Максим Лагашкин) и его сын от предыдущего брака, второклассник Егор
+							(Александр Петров). Девушка торопится
+							на соревнования по лёгкой атлетике. В это время её отец (Анатолий Белый), бортмеханик
+							космической орбитальной станции
+							«Мира», парит над Землей. Формально он и члены его команды занимаются исследованием
+							бабочек,
+							на самом же деле их
+							интересует новейшая система слежения за людьми. Внезапный метеоритный дождь оставляет
+							Владивосток в руинах, люди
+							спасаются как могут. Арабов с помощью системы слежения помогает дочери не погибнуть.
+							Зрелищный фильм-катастрофу со
+							множеством впечатляющих спецэффектов, снятый по заветам Роланда Эммериха, сделал Дмитрий
+							Киселёв («Чёрная молния» и
+							«Время первых»). Но в центре творящегося на Земле апокалипсиса трогательная история
+							отношений отца и дочери, разделённых
+							огромным расстоянием.
+						</p>
+
+					</div>
+				</div>
+			</section>
+
+			<section class="genres main-section similar-to">
+				<div class="container-lg">
+
+					<div class="row">
+						<div class="col-12">
+							<h4 class="">Похожие</h4>
+						</div>
+					</div>
+
+					<div class="similar-wrap">
+
+						<div class="swiper genres-slider">
+							<div class="swiper-wrapper genres-slider__wrapper ">
+
+								<div class="swiper-slide col-xl-2 col-lg-2 col-md-3 col-sm-4 col-4">
+									<a href="#" class="popular-films__item">
+										<img src="./img/popular/naruto.png" class="w-100 img-fluid" alt="">
+										<div class="popular-films__raitings raitings">
+											<div class="raitings__kp">kp: 7.2</div>
+											<div class="raitings__imdb">imdb: 7.7</div>
+										</div>
+										<div class="popular-films__body">
+											<div class="popular-films__title-film">наруто</div>
+											<div class="popular-films__years-film">2002 - 2007</div>
+											<div class="popular-films__country-film">США</div>
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide col-xl-2 col-lg-2 col-md-3 col-sm-4 col-4">
+									<a href="#" class="popular-films__item">
+										<img src="./img/popular/naruto.png" class="w-100 img-fluid" alt="">
+										<div class="popular-films__raitings raitings">
+											<div class="raitings__kp">kp: 7.2</div>
+											<div class="raitings__imdb">imdb: 7.7</div>
+										</div>
+										<div class="popular-films__body">
+											<div class="popular-films__title-film">наруто</div>
+											<div class="popular-films__years-film">2002 - 2007</div>
+											<div class="popular-films__country-film">США</div>
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide col-xl-2 col-lg-2 col-md-3 col-sm-4 col-4">
+									<a href="#" class="popular-films__item">
+										<img src="./img/popular/naruto.png" class="w-100 img-fluid" alt="">
+										<div class="popular-films__raitings raitings">
+											<div class="raitings__kp">kp: 7.2</div>
+											<div class="raitings__imdb">imdb: 7.7</div>
+										</div>
+										<div class="popular-films__body">
+											<div class="popular-films__title-film">наруто</div>
+											<div class="popular-films__years-film">2002 - 2007</div>
+											<div class="popular-films__country-film">США</div>
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide col-xl-2 col-lg-2 col-md-3 col-sm-4 col-4">
+									<a href="#" class="popular-films__item">
+										<img src="./img/popular/naruto.png" class="w-100 img-fluid" alt="">
+										<div class="popular-films__raitings raitings">
+											<div class="raitings__kp">kp: 7.2</div>
+											<div class="raitings__imdb">imdb: 7.7</div>
+										</div>
+										<div class="popular-films__body">
+											<div class="popular-films__title-film">наруто</div>
+											<div class="popular-films__years-film">2002 - 2007</div>
+											<div class="popular-films__country-film">США</div>
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide col-xl-2 col-lg-2 col-md-3 col-sm-4 col-4">
+									<a href="#" class="popular-films__item">
+										<img src="./img/popular/naruto.png" class="w-100 img-fluid" alt="">
+										<div class="popular-films__raitings raitings">
+											<div class="raitings__kp">kp: 7.2</div>
+											<div class="raitings__imdb">imdb: 7.7</div>
+										</div>
+										<div class="popular-films__body">
+											<div class="popular-films__title-film">наруто</div>
+											<div class="popular-films__years-film">2002 - 2007</div>
+											<div class="popular-films__country-film">США</div>
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide col-xl-2 col-lg-2 col-md-3 col-sm-4 col-4">
+									<a href="#" class="popular-films__item">
+										<img src="./img/popular/naruto.png" class="w-100 img-fluid" alt="">
+										<div class="popular-films__raitings raitings">
+											<div class="raitings__kp">kp: 7.2</div>
+											<div class="raitings__imdb">imdb: 7.7</div>
+										</div>
+										<div class="popular-films__body">
+											<div class="popular-films__title-film">наруто</div>
+											<div class="popular-films__years-film">2002 - 2007</div>
+											<div class="popular-films__country-film">США</div>
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide col-xl-2 col-lg-2 col-md-3 col-sm-4 col-4">
+									<a href="#" class="popular-films__item">
+										<img src="./img/popular/naruto.png" class="w-100 img-fluid" alt="">
+										<div class="popular-films__raitings raitings">
+											<div class="raitings__kp">kp: 7.2</div>
+											<div class="raitings__imdb">imdb: 7.7</div>
+										</div>
+										<div class="popular-films__body">
+											<div class="popular-films__title-film">наруто</div>
+											<div class="popular-films__years-film">2002 - 2007</div>
+											<div class="popular-films__country-film">США</div>
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide col-xl-2 col-lg-2 col-md-3 col-sm-4 col-4">
+									<a href="#" class="popular-films__item">
+										<img src="./img/popular/naruto.png" class="w-100 img-fluid" alt="">
+										<div class="popular-films__raitings raitings">
+											<div class="raitings__kp">kp: 7.2</div>
+											<div class="raitings__imdb">imdb: 7.7</div>
+										</div>
+										<div class="popular-films__body">
+											<div class="popular-films__title-film">наруто</div>
+											<div class="popular-films__years-film">2002 - 2007</div>
+											<div class="popular-films__country-film">США</div>
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide col-xl-2 col-lg-2 col-md-3 col-sm-4 col-4">
+									<a href="#" class="popular-films__item">
+										<img src="./img/popular/naruto.png" class="w-100 img-fluid" alt="">
+										<div class="popular-films__raitings raitings">
+											<div class="raitings__kp">kp: 7.2</div>
+											<div class="raitings__imdb">imdb: 7.7</div>
+										</div>
+										<div class="popular-films__body">
+											<div class="popular-films__title-film">наруто</div>
+											<div class="popular-films__years-film">2002 - 2007</div>
+											<div class="popular-films__country-film">США</div>
+										</div>
+									</a>
+								</div>
+								<div class="swiper-slide col-xl-2 col-lg-2 col-md-3 col-sm-4 col-4">
+									<a href="#" class="popular-films__item">
+										<img src="./img/popular/naruto.png" class="w-100 img-fluid" alt="">
+										<div class="popular-films__raitings raitings">
+											<div class="raitings__kp">kp: 7.2</div>
+											<div class="raitings__imdb">imdb: 7.7</div>
+										</div>
+										<div class="popular-films__body">
+											<div class="popular-films__title-film">наруто</div>
+											<div class="popular-films__years-film">2002 - 2007</div>
+											<div class="popular-films__country-film">США</div>
+										</div>
+									</a>
+								</div>
+
+
+
+
+							</div>
+
+						</div>
+						<!-- <div class="genres-slider__btn-next swiper-button-next"></div>
+									<div class="genres-slider__btn-prev swiper-button-prev"></div> -->
+
+					</div>
+				</div>
+			</section>
+			<!-- </div> -->
+
+
+		</main>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-12">
+						<div class="footer__social-link">
+							<a href=""></a>
+							<a href=""></a>
+							<a href=""></a>
+							<a href=""></a>
+						</div>
+						<ul class="footer__navigation-link">
+							<li><a href="">Главная</a></li>
+							<li><a href="">Реклама</a></li>
+							<li><a href="">О разработчиках</a></li>
+						</ul>
+						<h4>© 2023 <a href="#">WebCinema</a> designed by Mihailuch</h4>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Элементы бургера -->
+		<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+			<div class="offcanvas-header">
+				<h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+			</div>
+			<div class="offcanvas-body">
+				<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#">Главная</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Ссылка</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							Выпадающий список
+						</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Действие</a></li>
+							<li><a class="dropdown-item" href="#">Другое действие</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
+						</ul>
+					</li>
+				</ul>
+				<form class="d-flex mt-3" role="search">
+					<input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
+					<button class="btn btn-outline-success" type="submit">Поиск</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+	<script src="./js/sliders.js"></script>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+		crossorigin="anonymous"></script>
+
+	<script src="https://cdn.jsdelivr.net/gh/thelevicole/youtube-to-html5-loader@4.0.1/dist/YouTubeToHtml5.js"></script>
+	<script>new YouTubeToHtml5();</script>
+</body>
+
+</html>

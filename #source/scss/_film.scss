@@ -1,0 +1,194 @@
+$white: #ffffff;
+$black: #000000;
+$black-gray: #171717;
+$gray: rgba(255, 255, 255, 0.25);
+$blue: rgba(71, 156, 255, .42);
+$blue-intense: #479CFF;
+$orange: #eb4e00d8;
+$yellow: #f0bc00d8;
+
+// .film-page-wrapper{
+// 	display: flex;
+// 	min-height: 100vh;
+// }
+
+.full-screen {
+	margin-top: -95px;
+	color: $white;
+	// background: url(/img/popular/pirats.jpg) right no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	min-height: 100vh;
+	position: relative;
+
+	z-index: 1;
+	border-radius: 0 0 25px 25px;
+	overflow: hidden;
+
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 50%;
+		z-index: -1;
+		background: rgb(23, 23, 23);
+		background: linear-gradient(180deg, rgb(23, 23, 23) 0%, rgba(255, 255, 255, 0) 80%);
+	}
+
+
+
+
+
+
+	video {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		object-fit: cover;
+		z-index: -2;
+	}
+
+	&__content {
+		z-index: 1;
+		position: relative;
+		padding: 25px;
+
+
+		// background: #1717177c;
+		// border-radius: 25px;
+		// overflow: hidden;
+
+		// &::before {
+		// 	content: '';
+		// 	position: absolute;
+		// 	top: 0;
+		// 	left: 0;
+		// 	height: 100%;
+		// 	width: 10%;
+		// 	// filter: blur(5px);
+		// 	z-index: -1;
+		// }
+	}
+
+	&__film-name {
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: 64px;
+		line-height: 77px;
+		letter-spacing: 0.24em;
+		color: $white;
+	}
+
+	&__film-info {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+	}
+
+	&__raitings {
+		// margin-right: 5px;
+	}
+
+	&__overviewMeta-description {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 19px;
+		text-align: justify;
+		letter-spacing: 0.05em;
+	}
+
+	&__short-description {
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 22px;
+		text-align: justify;
+		letter-spacing: 0.1em;
+	}
+
+	&__btn {}
+}
+
+.film-details {
+	margin: 35px 0 0 0;
+
+	&__line {
+		display: flex;
+
+		align-items: start;
+		gap: 10px;
+		margin-bottom: 10px;
+	}
+
+	&__title {
+		font-size: 18px;
+		line-height: 22px;
+		// text-align: justify;
+		letter-spacing: 0.1em;
+		font-weight: 600;
+		color: #479CFF;
+		// margin-bottom: 10px;
+		margin-bottom: 0;
+		align-self: start;
+	}
+
+	ul {
+		flex-wrap: wrap;
+		display: flex;
+		// align-items: start;
+
+		gap: 5px;
+		margin-bottom: 0;
+
+		li {
+
+			font-weight: 600;
+
+			font-size: 15px;
+			line-height: 22px;
+			/* identical to box height */
+
+			text-align: justify;
+			letter-spacing: 0.1em;
+
+			a {
+				display: block;
+				color: $white;
+				transition: all .15s ease;
+			}
+
+			&:hover {
+				a {
+					color: $blue-intense;
+				}
+			}
+
+
+		}
+	}
+
+}
+
+
+.similar-to {}
+
+.film-full-description {
+	margin-bottom: 35px;
+
+	p {
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 27px;
+		text-align: justify;
+		letter-spacing: 0.05em;
+
+		color: rgba(255, 255, 255, 0.6);
+	}
+}

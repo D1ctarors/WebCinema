@@ -70,6 +70,11 @@ a:hover {
 	text-decoration: none;
 }
 
+ul,
+ol {
+	padding: 0;
+}
+
 ul li {
 	list-style: none;
 }
@@ -147,4 +152,3 @@ input:focus:-ms-input-placeholder {
 	opacity: 0;
 	transition: opacity 0.2s ease;
 }
-

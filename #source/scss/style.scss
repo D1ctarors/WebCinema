@@ -1,4 +1,5 @@
-@import 'reset.scss';
+@import "reset";
+@import "film";
 
 // Основные цвета
 $white: #ffffff;
@@ -41,13 +42,13 @@ body {
 	background: $black-gray;
 	overflow-x: hidden;
 }
+
 // Скрытие скролл бара
-/* хром, сафари */
+
 ::-webkit-scrollbar {
 	width: 0;
 	-ms-overflow-style: none;
-	
-			overflow: -moz-scrollbars-none;
+	overflow: -moz-scrollbars-none;
 }
 
 // Прибивание футера к низу
@@ -55,6 +56,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100%;
+	// min-height: 100vh;
+
 	// overflow-x: hidden;
 }
 
@@ -83,8 +86,10 @@ body {
 // Навбар
 
 .header {
-	margin-bottom: 45px;
+	position: relative;
+	margin-bottom: 15px;
 	padding-top: 15px;
+	z-index: 3;
 
 	@media (max-width: $tablet) {
 		padding-top: 12px;
@@ -300,6 +305,7 @@ swiper-container {
 
 .top-films {
 	position: relative;
+	margin-top: 35px;
 }
 
 .top-films-slider__slide img {
