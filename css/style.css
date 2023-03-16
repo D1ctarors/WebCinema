@@ -805,6 +805,11 @@ swiper-container {
   letter-spacing: 0.05em;
   color: #ffffff;
 }
+@media (max-width: 530px) {
+  .genres__top h5 {
+    font-size: 18px;
+  }
+}
 .genres__top a {
   display: block;
   font-weight: 600;
