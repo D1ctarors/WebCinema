@@ -361,8 +361,8 @@ body {
 }
 @media (max-width: 530px) {
   .main-section h4 {
-    font-size: 18px;
-    line-height: 27px;
+    font-size: 20px;
+    line-height: 30px;
     margin-bottom: 10px;
   }
 }
@@ -815,6 +815,11 @@ swiper-container {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+}
+@media (max-width: 530px) {
+  .genres__top a {
+    font-size: 13px;
+  }
 }
 .genres__top a:hover {
   color: #479CFF;
