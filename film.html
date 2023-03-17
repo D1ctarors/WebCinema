@@ -19,7 +19,10 @@
 </head>
 
 <body>
+
 	<div class="wrapper">
+
+
 		<header class="header">
 			<nav class="navbar navbar-expand-lg text-end">
 				<div class="container-lg">
@@ -49,13 +52,9 @@
 		<main class="main">
 			<!-- <div class="film-page-wrapper"> -->
 			<section class="full-screen full-screen-film">
-
-				<!-- <video autoplay muted loop>
-					<source src="https://www.youtube.com/embed/2mVDlL7YQ7o" type="video/mp4" />
-				</video> -->
 				<video autoplay muted loop poster="./img/mira-film.png" playsinline="playsinline"
 					webkit-playsinline="webkit-playsinline" preload="auto"
-					data-yt2html5="https://www.youtube.com/watch?v=PzFh5C7QxiA">
+					src="https://www.youtube.com/watch?v=PzFh5C7QxiA" type="video/mp4">
 				</video>
 
 				<div class="container-lg full-screen__content">
@@ -126,7 +125,7 @@
 
 					<!-- Краткое описание -->
 					<div class="row mb-5">
-						<div class="col-xl-5 full-screen__short-description">
+						<div class="col-xl-5 col-lg-6 col-md-7 col-sm-8 full-screen__short-description">
 							Российский космонавт спасает дочь на Земле, не спускаясь с орбиты. Зрелищный
 							фильм-катастрофа по заветам Эммериха.
 						</div>
@@ -135,16 +134,12 @@
 					<!-- Кнопка -->
 					<div class="row">
 						<div class="col-xl-3">
-							<button class="btn btn-main full-screen__btn">Смотреть</button>
+							<button class="btn btn-main full-screen__btn" data-bs-toggle="modal"
+								data-bs-target="#showVideo">Смотреть</button>
 						</div>
 					</div>
 
 				</div>
-
-
-
-
-
 			</section>
 
 			<section class="film-details">
@@ -482,21 +477,46 @@
 				</form>
 			</div>
 		</div>
+
+		<!-- Модальное окно -->
+		<div class="modal fade modal-film" id="showVideo" tabindex="-1" aria-labelledby="testModal" aria-hidden="true">
+			<div class="modal-dialog modal-xl modal-fullscreen-sm-down modal-dialog-centered">
+				<div class="modal-content modal-film__content">
+
+					<div class="modal-body modal-body-film">
+
+						<div id="yohoho" data-kinopoisk="1227997"></div>
+
+
+
+						<button type="button" class="btn-close modal-body-film__close" data-bs-dismiss="modal"
+							aria-label="Закрыть"></button>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /Модальное окно -->
+
+
+
 	</div>
 
 	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
+	<script src="//yohoho.cc/yo.js"></script>
+
 	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 	<script src="./js/sliders.js"></script>
 
+	<!-- <script src="./js/youtube-downloader.js"></script> -->
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
 		crossorigin="anonymous"></script>
 
-	<script src="https://cdn.jsdelivr.net/gh/thelevicole/youtube-to-html5-loader@4.0.1/dist/YouTubeToHtml5.js"></script>
-	<script>new YouTubeToHtml5();</script>
 </body>
 
 </html>
